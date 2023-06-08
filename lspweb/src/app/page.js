@@ -100,6 +100,156 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={styles["benefit-box"]}>
+        <Typography
+          sx={{
+            fontWeight: 700,
+            color: "white",
+            fontSize: "36px",
+            textAlign: "center",
+            paddingTop: "35px",
+            paddingBottom: "35px",
+          }}
+        >
+          Supercharge your competitive intelligence discipline
+        </Typography>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className={styles["benefit-card"]}>
+                <div className={styles["benefit-img"]}>
+                  <img src="https://www.crayon.co/hs-fs/hubfs/capture-icon.png?width=130&height=130&name=capture-icon.png" />
+                </div>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#040924",
+                    fontWeight: 600,
+                    fontSize: "24px",
+                    paddingTop: "10px",
+                  }}
+                >
+                  UNPARALLELED INTELLIGENCE
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#6F7375",
+                    fontSize: "20px",
+                    paddingTop: "15px",
+                  }}
+                >
+                  Outsmart the competition and drive revenue growth with a
+                  platform that automatically gathers, organizes, and amplifies
+                  crucial data from millions of sources.
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: "20px",
+                    paddingTop: "25px",
+                    color: "#2dc3d0",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    transition: "all .15s ease",
+                    fontWeight: 500,
+                  }}
+                >
+                  Learn More
+                </Typography>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles["benefit-card"]}>
+                <div className={styles["benefit-img"]}>
+                  <img src="https://www.crayon.co/hs-fs/hubfs/capture-icon.png?width=130&height=130&name=capture-icon.png" />
+                </div>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#040924",
+                    fontWeight: 600,
+                    fontSize: "24px",
+                    paddingTop: "10px",
+                  }}
+                >
+                  UNPARALLELED INTELLIGENCE
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#6F7375",
+                    fontSize: "20px",
+                    paddingTop: "15px",
+                  }}
+                >
+                  Outsmart the competition and drive revenue growth with a
+                  platform that automatically gathers, organizes, and amplifies
+                  crucial data from millions of sources.
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: "20px",
+                    paddingTop: "25px",
+                    color: "#2dc3d0",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    transition: "all .15s ease",
+                    fontWeight: 500,
+                  }}
+                >
+                  Learn More
+                </Typography>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles["benefit-card"]}>
+                <div className={styles["benefit-img"]}>
+                  <img src="https://www.crayon.co/hs-fs/hubfs/capture-icon.png?width=130&height=130&name=capture-icon.png" />
+                </div>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#040924",
+                    fontWeight: 600,
+                    fontSize: "24px",
+                    paddingTop: "10px",
+                  }}
+                >
+                  UNPARALLELED INTELLIGENCE
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#6F7375",
+                    fontSize: "20px",
+                    paddingTop: "15px",
+                  }}
+                >
+                  Outsmart the competition and drive revenue growth with a
+                  platform that automatically gathers, organizes, and amplifies
+                  crucial data from millions of sources.
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: "20px",
+                    paddingTop: "25px",
+                    color: "#2dc3d0",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    transition: "all .15s ease",
+                    fontWeight: 500,
+                  }}
+                >
+                  Learn More
+                </Typography>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
