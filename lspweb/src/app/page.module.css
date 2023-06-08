@@ -56,6 +56,50 @@
   justify-content: center;
 }
 
+.insight-box {
+  background-color: rgb(254, 195, 17);
+  height: 100%;
+  min-height: 600px;
+  padding-bottom: 100px;
+}
+
+.imginsight {
+  width: 70%;
+  /* display: block;
+  margin: auto; */
+  z-index: 1;
+  position: absolute;
+}
+
+.desc-insight {
+  font-size: 17px;
+  color: #040924;
+  font-weight: 400;
+  margin-top: 50px;
+}
+
+.best-product {
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px;
+}
+
+.img-bestproduct {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.info-bestproduct {
+  display: flex;
+  /* display: inline-block; */
+  vertical-align: middle;
+  color: #44474c;
+}
+.imgproduct {
+  width: 45px;
+}
+
 @media (max-width: 768px) {
   .box-banner {
     height: 100%;
