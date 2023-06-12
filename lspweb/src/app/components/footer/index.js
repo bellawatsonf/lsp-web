@@ -67,7 +67,9 @@ export default function Footer() {
             color: "white",
           }}
         ></div>
-        <Typography sx={{ fontSize: "13px" }}>
+        <Typography
+          sx={{ fontSize: "13px", textAlign: { xs: "center", md: "left" } }}
+        >
           &copy; 2023 LSP-STIAMI
         </Typography>
       </div>

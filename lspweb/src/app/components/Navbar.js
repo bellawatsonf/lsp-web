@@ -1,4 +1,5 @@
 import style from "./navbar.module.css";
+import Link from "next/link";
 export default function Navbar() {
   return (
     <div className="navigation">
@@ -9,11 +10,21 @@ export default function Navbar() {
           </div>
           <div className="col">
             <ul className={`${style.menuList}`}>
-              <li className={style["nav-item"]}>Home</li>
-              <li className={style["nav-item"]}>Sertifikasi</li>
-              <li className={style["nav-item"]}>Asesor</li>
+              <li className={style["nav-item"]}>
+                {" "}
+                <Link href="/">Home</Link>
+              </li>
+              <li className={style["nav-item"]}>
+                {" "}
+                <Link href="/sertifikasi">Sertifikasi</Link>
+              </li>
+              <li className={style["nav-item"]}>
+                <Link href="/asesor">Asesor</Link>
+              </li>
               <li className={style["nav-item"]}>TUK</li>
-              <li className={style["nav-item"]}>Tentang</li>
+              <li className={style["nav-item"]}>
+                <Link href="/tentang">Tentang</Link>
+              </li>
             </ul>
           </div>
         </div>

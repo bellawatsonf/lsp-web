@@ -12,12 +12,15 @@ export default function Home() {
       <div className={styles["box-banner"]}>
         <div className="container">
           <div className="row">
-            <div className="col col-lg-6">
+            <div className="col-12 col-lg-6">
               <div className={styles["banner-img"]}>
-                <img src="https://www.crayon.co/hs-fs/hubfs/CRAY_Homepage_13.png?width=366&height=550&name=CRAY_Homepage_13.png" />
+                <img
+                  className={`${styles.gambarbanner}`}
+                  src="https://www.crayon.co/hs-fs/hubfs/CRAY_Homepage_13.png?width=366&height=550&name=CRAY_Homepage_13.png"
+                />
               </div>
             </div>
-            <div className="col col-lg-6">
+            <div className="col-12 col-lg-6">
               <div className={styles["desc-banner"]}>
                 <Typography
                   sx={{
@@ -59,12 +62,15 @@ export default function Home() {
       <div className={styles["inform-section"]}>
         <div className="container">
           <div className="row">
-            <div className="col col-lg-6">
+            <div className="col-12 col-lg-6">
               <div className={styles["informsection-img"]}>
-                <img src="https://www.crayon.co/hs-fs/hubfs/PMA%20Pulse%202023_HomepageImage.png?width=542&height=450&name=PMA%20Pulse%202023_HomepageImage.png" />
+                <img
+                  className={`${styles.gambarinformsection}`}
+                  src="https://www.crayon.co/hs-fs/hubfs/PMA%20Pulse%202023_HomepageImage.png?width=542&height=450&name=PMA%20Pulse%202023_HomepageImage.png"
+                />
               </div>
             </div>
-            <div className="col col-lg-6">
+            <div className="col-12 col-lg-6">
               <div className={styles["desc-informsection"]}>
                 <Typography
                   sx={{
@@ -116,7 +122,7 @@ export default function Home() {
         </Typography>
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-4">
               <div className={styles["benefit-card"]}>
                 <div className={styles["benefit-img"]}>
                   <img src="https://www.crayon.co/hs-fs/hubfs/capture-icon.png?width=130&height=130&name=capture-icon.png" />
@@ -160,7 +166,7 @@ export default function Home() {
                 </Typography>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-4">
               <div className={styles["benefit-card"]}>
                 <div className={styles["benefit-img"]}>
                   <img src="https://www.crayon.co/hs-fs/hubfs/capture-icon.png?width=130&height=130&name=capture-icon.png" />
@@ -204,7 +210,7 @@ export default function Home() {
                 </Typography>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-4">
               <div className={styles["benefit-card"]}>
                 <div className={styles["benefit-img"]}>
                   <img src="https://www.crayon.co/hs-fs/hubfs/capture-icon.png?width=130&height=130&name=capture-icon.png" />
@@ -266,7 +272,7 @@ export default function Home() {
             src="https://www.crayon.co/hs-fs/hubfs/bg-top-pattern.png?width=2718&height=4160&name=bg-top-pattern.png"
           />
         </div>
-        <Box sx={{ zIndex: 999, position: "relative", marginTop: "50px" }}>
+        <Box className={styles["box-infoinsight"]}>
           <div className="container">
             <div className="row">
               <div className="col-lg-6 mb-5">
@@ -305,40 +311,84 @@ export default function Home() {
                   </Typography>
                 </div>
               </div>
+
               <div className="col-lg-6 mb-5">
-                <div className={styles["desc-insight"]}>
-                  <Typography sx={{ fontSize: "40px" }}>
-                    Way more data,
-                    <br />
-                    Way less time
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "#040924",
-                      fontSize: "17px",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    Manual research is not only time-consuming—it’s also risky.
-                    When you rely on human effort, you’re prone to missed
-                    opportunities and undetected threats.
-                    <br />
-                    <br />
-                    With Crayon, you can automatically capture your competitors’
-                    movements in real time. Tap into more than one hundred
-                    different data types across millions of competitive
-                    intelligence sources to stay on top of product updates,
-                    messaging pivots, executive team changes, and more.
-                    <br />
-                    <br />
-                    Learn more about Crayon’s approach to Competitive
-                    Intelligence and What We Track.
-                  </Typography>
+                <div className={`${styles.forDesktop}`}>
+                  <div className={styles["desc-insight"]}>
+                    <Typography sx={{ fontSize: "40px" }}>
+                      Way more data,
+                      <br />
+                      Way less time
+                    </Typography>
+                    <Typography
+                      sx={{
+                        color: "#040924",
+                        fontSize: "17px",
+                        paddingTop: "20px",
+                      }}
+                    >
+                      Manual research is not only time-consuming—it’s also
+                      risky. When you rely on human effort, you’re prone to
+                      missed opportunities and undetected threats.
+                      <br />
+                      <br />
+                      With Crayon, you can automatically capture your
+                      competitors’ movements in real time. Tap into more than
+                      one hundred different data types across millions of
+                      competitive intelligence sources to stay on top of product
+                      updates, messaging pivots, executive team changes, and
+                      more.
+                      <br />
+                      <br />
+                      Learn more about Crayon’s approach to Competitive
+                      Intelligence and What We Track.
+                    </Typography>
+                  </div>
+                </div>
+                <div className={`${styles.forMobile}`}>
+                  <div className={styles["insight-img"]}>
+                    <img src="https://www.crayon.co/hs-fs/hubfs/ProductImagery_Homepage-01.png?width=550&height=584&name=ProductImagery_Homepage-01.png" />
+                  </div>
                 </div>
               </div>
+
               <div className="col-lg-6 mb-5">
-                <div className={styles["insight-img"]}>
-                  <img src="https://www.crayon.co/hs-fs/hubfs/ProductImagery_Homepage-01.png?width=550&height=584&name=ProductImagery_Homepage-01.png" />
+                <div className={`${styles.forDesktop}`}>
+                  <div className={styles["insight-img"]}>
+                    <img src="https://www.crayon.co/hs-fs/hubfs/ProductImagery_Homepage-01.png?width=550&height=584&name=ProductImagery_Homepage-01.png" />
+                  </div>
+                </div>
+                <div className={`${styles.forMobile}`}>
+                  <div className={styles["desc-insight"]}>
+                    <Typography sx={{ fontSize: "40px" }}>
+                      Way more data,
+                      <br />
+                      Way less time
+                    </Typography>
+                    <Typography
+                      sx={{
+                        color: "#040924",
+                        fontSize: "17px",
+                        paddingTop: "20px",
+                      }}
+                    >
+                      Manual research is not only time-consuming—it’s also
+                      risky. When you rely on human effort, you’re prone to
+                      missed opportunities and undetected threats.
+                      <br />
+                      <br />
+                      With Crayon, you can automatically capture your
+                      competitors’ movements in real time. Tap into more than
+                      one hundred different data types across millions of
+                      competitive intelligence sources to stay on top of product
+                      updates, messaging pivots, executive team changes, and
+                      more.
+                      <br />
+                      <br />
+                      Learn more about Crayon’s approach to Competitive
+                      Intelligence and What We Track.
+                    </Typography>
+                  </div>
                 </div>
               </div>
 
