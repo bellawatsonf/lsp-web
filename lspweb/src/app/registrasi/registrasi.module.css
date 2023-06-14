@@ -1,0 +1,18 @@
+.boxRegister {
+  width: 100%;
+  background-color: rgb(192, 237, 241);
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  height: 100vh;
+}
+
+.boxRegisStepper {
+  width: 70%;
+  margin: auto;
+  display: block;
+  background: white;
+  position: relative;
+  top: 15%;
+  padding: 50px 50px;
+  /* height: 100%; */
+}

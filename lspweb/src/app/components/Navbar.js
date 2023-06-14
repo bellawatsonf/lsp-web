@@ -25,6 +25,9 @@ export default function Navbar() {
               <li className={style["nav-item"]}>
                 <Link href="/tentang">Tentang</Link>
               </li>
+              <li className={style["nav-item"]}>
+                <Link href="/login">Masuk</Link>
+              </li>
             </ul>
           </div>
         </div>
