@@ -7,15 +7,12 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const steps = [
-  "Data Pemohon Sertifikasi",
-  "Create an ad group",
-  "Create an ad",
-];
+const steps = ["Data Pemohon Sertifikasi", "Data Pekerjaan", "Create an ad"];
 
 import styles from "./registrasi.module.css";
 import Step1 from "../components/registrasi/step1.js";
 import Step2 from "../components/registrasi/step2";
+import { Formik } from "formik";
 export default function Regitrasi() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
@@ -68,11 +65,11 @@ export default function Regitrasi() {
           {steps.map((label, index) => {
             const stepProps = {};
             const labelProps = {};
-            if (isStepOptional(index)) {
-              labelProps.optional = (
-                <Typography variant="caption">Optional</Typography>
-              );
-            }
+            // if (isStepOptional(index)) {
+            //   labelProps.optional = (
+            //     <Typography variant="caption">Optional</Typography>
+            //   );
+            // }
             if (isStepSkipped(index)) {
               stepProps.completed = false;
             }
@@ -107,14 +104,79 @@ export default function Regitrasi() {
               Formulir Pendaftaran
             </Typography>
 
-            <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
-            {activeStep === 0 ? (
-              <>
-                <Step1 />
-              </>
-            ) : activeStep === 1 ? (
-              <Step2 />
-            ) : null}
+            <Typography
+              sx={{
+                mb: 1,
+                fontWeight: 600,
+                color: "rgb(4, 9, 36)",
+                fontSize: "18px",
+              }}
+            >
+              Step {activeStep + 1}
+            </Typography>
+            <Formik
+              initialValues={{ email: "", password: "" }}
+              validate={(values) => {
+                const errors = {};
+                if (!values.email) {
+                  errors.email = "Required";
+                } else if (
+                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
+                  errors.email = "Invalid email address";
+                }
+                return errors;
+              }}
+              onSubmit={(values, { setSubmitting }) => {
+                setTimeout(() => {
+                  alert(JSON.stringify(values, null, 2));
+                  setSubmitting(false);
+                }, 400);
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                isSubmitting,
+                /* and other goodies */
+              }) => (
+                <form onSubmit={handleSubmit}>
+                  {/* <input
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                  />
+                  {errors.email && touched.email && errors.email}
+                  <input
+                    type="password"
+                    name="password"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.password}
+                  /> */}
+                  {activeStep === 0 ? (
+                    <>
+                      <Step1 />
+                    </>
+                  ) : activeStep === 1 ? (
+                    <Step2 />
+                  ) : null}
+                  {errors.password && touched.password && errors.password}
+                  {activeStep === 2 ? (
+                    <button type="submit" disabled={isSubmitting}>
+                      Submit
+                    </button>
+                  ) : null}
+                </form>
+              )}
+            </Formik>
+
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
                 color="inherit"
@@ -122,14 +184,14 @@ export default function Regitrasi() {
                 onClick={handleBack}
                 sx={{ mr: 1 }}
               >
-                Back
+                Previous
               </Button>
               <Box sx={{ flex: "1 1 auto" }} />
-              {isStepOptional(activeStep) && (
+              {/* {isStepOptional(activeStep) && (
                 <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
                   Skip
                 </Button>
-              )}
+              )} */}
 
               <Button onClick={handleNext}>
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
