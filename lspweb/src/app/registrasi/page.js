@@ -11,6 +11,7 @@ const steps = [
   "Data Pemohon Sertifikasi",
   "Data Pekerjaan",
   "Kelengkapan Berkas",
+  "Tanda Tangan",
 ];
 
 import styles from "./registrasi.module.css";
@@ -175,55 +176,58 @@ export default function Regitrasi() {
                     <Step3 />
                   )}
                   {errors.password && touched.password && errors.password}
-                  {activeStep === 2 ? (
+                  {/* {activeStep === 2 ? (
                     <button type="submit" disabled={isSubmitting}>
                       Submit
                     </button>
-                  ) : null}
-                </form>
-              )}
-            </Formik>
+                  ) : null} */}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      pt: 2,
+                      paddingLeft: "10px",
+                      paddingRight: "15px",
+                      mt: 4,
+                    }}
+                  >
+                    <Button
+                      // color="inherit"
+                      // disabled={activeStep === 0}
+                      // variant="outlined"
 
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                pt: 2,
-                paddingLeft: "15px",
-                paddingRight: "15px",
-              }}
-            >
-              <Button
-                // color="inherit"
-                // disabled={activeStep === 0}
-                // variant="outlined"
-
-                onClick={handleBack}
-                // sx={{ mr: 1 }}
-                sx={{
-                  border: "1px solid #2DC3D0",
-                  display: activeStep === 0 ? "none" : "block",
-                  color: "#2DC3D0",
-                }}
-              >
-                Previous
-              </Button>
-              <Box sx={{ flex: "1 1 auto" }} />
-              {/* {isStepOptional(activeStep) && (
+                      onClick={handleBack}
+                      // sx={{ mr: 1 }}
+                      sx={{
+                        border: "1px solid #2DC3D0",
+                        display: activeStep === 0 ? "none" : "block",
+                        color: "#2DC3D0",
+                      }}
+                    >
+                      Previous
+                    </Button>
+                    <Box sx={{ flex: "1 1 auto" }} />
+                    {/* {isStepOptional(activeStep) && (
                 <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
                   Skip
                 </Button>
               )} */}
 
-              <Button
-                variant="contained"
-                color="success"
-                onClick={handleNext}
-                sx={{ background: "#2DC3D0" }}
-              >
-                {activeStep === steps.length - 1 ? "Finish" : "Next"}
-              </Button>
-            </Box>
+                    <Button
+                      variant="contained"
+                      color="success"
+                      onClick={handleNext}
+                      sx={{
+                        background: "#2DC3D0",
+                        // display: activeStep !== 2 ? "block" : "none",
+                      }}
+                    >
+                      {activeStep === steps.length - 1 ? "Submit" : "Next"}
+                    </Button>
+                  </Box>
+                </form>
+              )}
+            </Formik>
           </React.Fragment>
         )}
       </Box>

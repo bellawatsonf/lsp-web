@@ -6,27 +6,26 @@ export default function Step3() {
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <label>
-            <Typography
-              sx={{
-                fontSize: "15px",
-                fontWeight: 500,
-                // paddingBottom: "10px",
-                paddingTop: "15px",
-              }}
-            >
-              Transkrip
-            </Typography>
-          </label>
-          <br />
+          <Typography
+            sx={{
+              fontSize: "15px",
+              fontWeight: 500,
+              // paddingBottom: "10px",
+              paddingTop: "15px",
+            }}
+          >
+            Transkrip
+          </Typography>
+
           <input
             type="file"
             name="transkrip"
             // onChange={handleChange}
             // onBlur={handleBlur}
-            // value={values.transkrip}
+            // value={values.ijazah}
           />
-          {/* {errors.transkrip && touched.transkrip && errors.transkrip} */}
+          {/* {errors.ijazah && touched.ijazah && errors.ijazah} */}
+          {/* <TextField fullWidth label="fullWidth" id="fullWidth" /> */}
         </div>
         <div className="col-12">
           <Typography
@@ -39,7 +38,6 @@ export default function Step3() {
           >
             Ijazah
           </Typography>
-          <br />
 
           <input
             type="file"
@@ -62,7 +60,6 @@ export default function Step3() {
           >
             KTP
           </Typography>
-          <br />
 
           <input
             type="file"
@@ -84,7 +81,6 @@ export default function Step3() {
           >
             Pas Foto
           </Typography>
-          <br />
 
           <input
             type="file"
@@ -108,11 +104,34 @@ export default function Step3() {
           >
             Surat Pernyataan Tidak Merekam
           </Typography>
-          <br />
 
           <input
             type="file"
             name="surat_pernyataan"
+            // onChange={handleChange}
+            // onBlur={handleBlur}
+            // value={values.surat_pernyataan}
+          />
+          {/* {errors.surat_pernyataan &&
+            touched.surat_pernyataan &&
+            errors.surat_pernyataan} */}
+          {/* <TextField fullWidth label="fullWidth" id="fullWidth" /> */}
+        </div>
+        <div className="col-12">
+          <Typography
+            sx={{
+              fontSize: "15px",
+              fontWeight: 500,
+              // paddingBottom: "10px",
+              paddingTop: "15px",
+            }}
+          >
+            Bukti Bayar
+          </Typography>
+
+          <input
+            type="file"
+            name="bukti_bayar"
             // onChange={handleChange}
             // onBlur={handleBlur}
             // value={values.surat_pernyataan}
