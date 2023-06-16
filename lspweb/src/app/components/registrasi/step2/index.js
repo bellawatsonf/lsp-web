@@ -15,7 +15,7 @@ export default function Step2() {
                 paddingTop: "15px",
               }}
             >
-              Nama Lengkap
+              Nama Institusi / Perusahaan
             </Typography>
           </label>
           {/* <input
@@ -37,7 +37,7 @@ export default function Step2() {
               paddingTop: "15px",
             }}
           >
-            No. KTP/NIK/Paspor
+            Jabatan
           </Typography>
           {/* <input
             type="email"
@@ -58,7 +58,7 @@ export default function Step2() {
               paddingTop: "15px",
             }}
           >
-            Tempat Lahir
+            Alamat Kantor
           </Typography>
           {/* <input
             type="email"
@@ -101,7 +101,51 @@ export default function Step2() {
               paddingTop: "15px",
             }}
           >
-            Alamat Kantor
+            Kode Pos Kantor
+          </Typography>
+          {/* <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+          />
+          {errors.email && touched.email && errors.email} */}
+          <TextField fullWidth label="fullWidth" id="fullWidth" />
+        </div>
+
+        <div className="col-6">
+          <Typography
+            sx={{
+              fontSize: "15px",
+              fontWeight: 500,
+              paddingBottom: "10px",
+              paddingTop: "15px",
+            }}
+          >
+            No.Telp Kantor
+          </Typography>
+          {/* <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+          />
+          {errors.email && touched.email && errors.email} */}
+          <TextField fullWidth label="fullWidth" id="fullWidth" />
+        </div>
+
+        <div className="col-6">
+          <Typography
+            sx={{
+              fontSize: "15px",
+              fontWeight: 500,
+              paddingBottom: "10px",
+              paddingTop: "15px",
+            }}
+          >
+            Fax Kantor
           </Typography>
           {/* <input
             type="email"
@@ -122,91 +166,7 @@ export default function Step2() {
               paddingTop: "15px",
             }}
           >
-            Kode Pos
-          </Typography>
-          {/* <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && errors.email} */}
-          <TextField fullWidth label="fullWidth" id="fullWidth" />
-        </div>
-        <div className="col-6">
-          <Typography
-            sx={{
-              fontSize: "15px",
-              fontWeight: 500,
-              paddingBottom: "10px",
-              paddingTop: "15px",
-            }}
-          >
-            No.Hp
-          </Typography>
-          {/* <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && errors.email} */}
-          <TextField fullWidth label="fullWidth" id="fullWidth" />
-        </div>
-        <div className="col-6">
-          <Typography
-            sx={{
-              fontSize: "15px",
-              fontWeight: 500,
-              paddingBottom: "10px",
-              paddingTop: "15px",
-            }}
-          >
-            No.Telp
-          </Typography>
-          {/* <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && errors.email} */}
-          <TextField fullWidth label="fullWidth" id="fullWidth" />
-        </div>
-        <div className="col-6">
-          <Typography
-            sx={{
-              fontSize: "15px",
-              fontWeight: 500,
-              paddingBottom: "10px",
-              paddingTop: "15px",
-            }}
-          >
-            Email KAntor
-          </Typography>
-          {/* <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && errors.email} */}
-          <TextField fullWidth label="fullWidth" id="fullWidth" />
-        </div>
-        <div className="col-6">
-          <Typography
-            sx={{
-              fontSize: "15px",
-              fontWeight: 500,
-              paddingBottom: "10px",
-              paddingTop: "15px",
-            }}
-          >
-            Fax
+            Email Kantor
           </Typography>
           {/* <input
             type="email"

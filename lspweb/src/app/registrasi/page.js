@@ -7,12 +7,17 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const steps = ["Data Pemohon Sertifikasi", "Data Pekerjaan", "Create an ad"];
+const steps = [
+  "Data Pemohon Sertifikasi",
+  "Data Pekerjaan",
+  "Kelengkapan Berkas",
+];
 
 import styles from "./registrasi.module.css";
 import Step1 from "../components/registrasi/step1.js";
 import Step2 from "../components/registrasi/step2";
 import { Formik } from "formik";
+import Step3 from "../components/registrasi/step3";
 export default function Regitrasi() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
@@ -101,7 +106,7 @@ export default function Regitrasi() {
                 padding: "60px 30px",
               }}
             >
-              Formulir Pendaftaran
+              Formulir APL 01
             </Typography>
 
             <Typography
@@ -166,7 +171,9 @@ export default function Regitrasi() {
                     </>
                   ) : activeStep === 1 ? (
                     <Step2 />
-                  ) : null}
+                  ) : (
+                    <Step3 />
+                  )}
                   {errors.password && touched.password && errors.password}
                   {activeStep === 2 ? (
                     <button type="submit" disabled={isSubmitting}>
@@ -177,12 +184,27 @@ export default function Regitrasi() {
               )}
             </Formik>
 
-            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                pt: 2,
+                paddingLeft: "15px",
+                paddingRight: "15px",
+              }}
+            >
               <Button
-                color="inherit"
-                disabled={activeStep === 0}
+                // color="inherit"
+                // disabled={activeStep === 0}
+                // variant="outlined"
+
                 onClick={handleBack}
-                sx={{ mr: 1 }}
+                // sx={{ mr: 1 }}
+                sx={{
+                  border: "1px solid #2DC3D0",
+                  display: activeStep === 0 ? "none" : "block",
+                  color: "#2DC3D0",
+                }}
               >
                 Previous
               </Button>
@@ -193,7 +215,12 @@ export default function Regitrasi() {
                 </Button>
               )} */}
 
-              <Button onClick={handleNext}>
+              <Button
+                variant="contained"
+                color="success"
+                onClick={handleNext}
+                sx={{ background: "#2DC3D0" }}
+              >
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
               </Button>
             </Box>
