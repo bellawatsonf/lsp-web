@@ -10,7 +10,7 @@ export default function Step3() {
             sx={{
               fontSize: "15px",
               fontWeight: 500,
-              // paddingBottom: "10px",
+              paddingBottom: "5px",
               paddingTop: "15px",
             }}
           >
@@ -32,7 +32,7 @@ export default function Step3() {
             sx={{
               fontSize: "15px",
               fontWeight: 500,
-              // paddingBottom: "10px",
+              paddingBottom: "5px",
               paddingTop: "15px",
             }}
           >
@@ -54,7 +54,7 @@ export default function Step3() {
             sx={{
               fontSize: "15px",
               fontWeight: 500,
-              // paddingBottom: "10px",
+              paddingBottom: "5px",
               paddingTop: "15px",
             }}
           >
@@ -75,7 +75,7 @@ export default function Step3() {
             sx={{
               fontSize: "15px",
               fontWeight: 500,
-              // paddingBottom: "10px",
+              paddingBottom: "5px",
               paddingTop: "15px",
             }}
           >
@@ -98,7 +98,7 @@ export default function Step3() {
             sx={{
               fontSize: "15px",
               fontWeight: 500,
-              // paddingBottom: "10px",
+              paddingBottom: "5px",
               paddingTop: "15px",
             }}
           >
@@ -122,7 +122,7 @@ export default function Step3() {
             sx={{
               fontSize: "15px",
               fontWeight: 500,
-              // paddingBottom: "10px",
+              paddingBottom: "5px",
               paddingTop: "15px",
             }}
           >

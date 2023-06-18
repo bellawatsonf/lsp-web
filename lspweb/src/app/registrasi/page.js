@@ -19,6 +19,7 @@ import Step1 from "../components/registrasi/step1.js";
 import Step2 from "../components/registrasi/step2";
 import { Formik } from "formik";
 import Step3 from "../components/registrasi/step3";
+import Step4 from "../components/registrasi/step4";
 export default function Regitrasi() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
@@ -172,8 +173,10 @@ export default function Regitrasi() {
                     </>
                   ) : activeStep === 1 ? (
                     <Step2 />
+                  ) : activeStep === 2 ? (
+                    <Step2 />
                   ) : (
-                    <Step3 />
+                    <Step4 />
                   )}
                   {errors.password && touched.password && errors.password}
                   {/* {activeStep === 2 ? (
