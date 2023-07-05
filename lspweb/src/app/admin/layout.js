@@ -1,11 +1,7 @@
-"use client";
-
-import "./globals.css";
+import "./../globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Inter } from "next/font/google";
-import { useRouter } from "react-router-dom";
-import { usePathname } from "next/navigation";
-// import { Link } from "next/link";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -14,12 +10,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log(children, "child");
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <p>layout utama</p>
-        {children}
-      </body>
-    </html>
+    <div>
+      <p>layout admin</p>
+      {children}
+    </div>
   );
 }

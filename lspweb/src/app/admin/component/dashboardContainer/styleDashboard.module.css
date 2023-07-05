@@ -1,0 +1,5 @@
+.boxContent {
+  width: 100%;
+  background-color: rgb(192, 237, 241);
+  display: flex;
+}
